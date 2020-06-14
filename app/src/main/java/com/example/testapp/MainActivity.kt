@@ -11,8 +11,7 @@ import org.json.JSONObject
 
 class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener{
     override fun onItemSelected(parent: AdapterView<*>, view: View, pos: Int, id: Long) {
-        var fromCurrency = fromSpinner.selectedItem.toString()
-        var toCurrency = toSpinner.selectedItem.toString()
+
     }
 
     override fun onNothingSelected(parent: AdapterView<*>) {
@@ -20,13 +19,8 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener{
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        var fromCurrency: String
-        var toCurrency: String
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val dollarRate: Int = 74
-        var userInputEditText = findViewById<EditText>(R.id.amountInput)
-        var userInputAmount = userInputEditText.text
         val fromSpinner: Spinner = findViewById(R.id.fromSpinner)
         fromSpinner.onItemSelectedListener = this
         ArrayAdapter.createFromResource(
