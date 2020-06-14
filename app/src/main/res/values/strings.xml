@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string-array name="currencies_array">
+        <item>Рубль</item>
+        <item>Евро</item>
+        <item>Доллар</item>
+        <item>Фунт</item>
+    </string-array>
+</resources>

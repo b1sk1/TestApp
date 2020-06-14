@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="206dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginBottom="18dp"
+        android:gravity="center"
+        android:text="Введите сумму для конвертации:"
+        app:layout_constraintBottom_toTopOf="@+id/amountInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/amountInput"
+        android:layout_width="206dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="18dp"
+        android:background="#d0d6d1"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/fromTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/fromTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:text="Выберите исходную валюту:"
+        app:layout_constraintBottom_toTopOf="@+id/fromSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/toSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/amountInput" />
+
+    <Spinner
+        android:id="@+id/fromSpinner"
+        android:layout_width="208dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/toTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fromTextView" />
+
+
+    <TextView
+        android:id="@+id/toTextView"
+        android:layout_width="209dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="14dp"
+        android:text="Выберите итоговую валюту:"
+        app:layout_constraintBottom_toTopOf="@+id/toSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fromSpinner" />
+
+    <Spinner
+        android:id="@+id/toSpinner"
+        android:layout_width="211dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toTextView" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="218dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="240dp"
+        android:background="@drawable/textview_border"
+        android:gravity="center"
+        android:text="Результат"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="22dp"
+        android:text="Конвертировать"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toEndOf="@+id/toSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/toSpinner" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
